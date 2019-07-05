@@ -9,12 +9,16 @@
     "eject": "react-scripts eject"
   },
   "dependencies": {
+    "apollo-boost": "^0.4.3",
+    "graphql": "^14.4.2",
     "react": "^16.8.6",
+    "react-apollo": "^2.5.8",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1"
+    "react-scripts": "3.0.1",
+    "styled-components": "^4.3.2"
   },
   "devDependencies": {
-    "eslint": "^6.0.1",
+    "eslint": "5.16",
     "eslint-plugin-react": "^7.14.2",
     "husky": "^3.0.0",
     "lint-staged": "^9.0.2",
