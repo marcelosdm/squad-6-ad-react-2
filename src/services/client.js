@@ -1,8 +1,13 @@
-import { ApolloClient, InMemoryCache } from 'apollo-boost'
+import { ApolloClient, InMemoryCache, HttpLink } from 'apollo-boost'
 
-const client = new ApolloClient({
-  link: 'https://api.github.com/graphql',
-  cache: new InMemoryCache()
+const httpLink = new HttpLink({
+  uri: 'https://api.github.com/graphql',
+  headers: {
+    authorization: `Bearer ${process.env.REACT_APP_GITHUB_TOKEN}`
+  }
 })
 
-export default client
+export default new ApolloClient({
+  link: httpLink,
+  cache: new InMemoryCache()
+})
