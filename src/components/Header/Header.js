@@ -1,12 +1,22 @@
 import React from 'react'
 
+import { Head, Img, Label, Input } from './styles'
+
+import logo from './assets/logo.svg'
+import slash from './assets/search-key-slash.svg'
+
 function Header () {
   return (
-    <header>
-      <img src='' />
-      GitHub React
-      <input type='text' placeholder='' />
-    </header>
+    <Head>
+      <a href='#'>
+        <Img logo src={logo} alt={'Github logo'} />
+      </a>
+
+      <Label>
+        <Input placeholder='Search or jump to...' />
+        <Img src={slash} alt={'Slash bar'} />
+      </Label>
+    </Head>
   )
 }
 
