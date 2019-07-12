@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Head, Img, Label, Input } from './styles'
+import { Head, Img, Label, Input, ButtonNew } from './styles'
 
 import logo from './assets/logo.svg'
 import slash from './assets/search-key-slash.svg'
@@ -16,6 +16,10 @@ function Header () {
         <Input placeholder='Search or jump to...' />
         <Img src={slash} alt={'Slash bar'} />
       </Label>
+
+      <ButtonNew type='button'>
+        <span className='glyphicon glyphicon-plus' /> New
+      </ButtonNew>
     </Head>
   )
 }

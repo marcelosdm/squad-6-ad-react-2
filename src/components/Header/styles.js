@@ -45,3 +45,14 @@ export const Input = styled.input`
   padding: 0 3px;
 
 `
+
+export const ButtonNew = styled.button`
+  position: relative;
+  top: -6px;
+  border: 0;
+  transition: all 40ms linear;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 2px;
+  margin-right: 2px;
+`
