@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Head, Img, Label, Input, ButtonNew } from './styles'
+import { ButtonNew, Div, Head, Img, Input, Label, MenuLink } from './styles'
 
 import logo from './assets/logo.svg'
 import slash from './assets/search-key-slash.svg'
@@ -8,18 +8,25 @@ import slash from './assets/search-key-slash.svg'
 function Header () {
   return (
     <Head>
-      <a href='#'>
-        <Img logo src={logo} alt={'Github logo'} />
-      </a>
+      <Div>
+        <MenuLink href='#'>
+          <Img logo src={logo} alt={'Github logo'} />
+        </MenuLink>
+      </Div>
 
-      <Label>
-        <Input placeholder='Search or jump to...' />
-        <Img src={slash} alt={'Slash bar'} />
-      </Label>
+      <Div>
+        <Label>
+          <Input placeholder='Search or jump to...' />
+          <Img src={slash} alt={'Slash bar'} />
+        </Label>
 
-      <ButtonNew type='button'>
-        <span className='glyphicon glyphicon-plus' /> New
-      </ButtonNew>
+        <MenuLink>Pull Requests</MenuLink>
+        <MenuLink>Issues</MenuLink>
+        <MenuLink>Marketplace</MenuLink>
+        <MenuLink>Explore</MenuLink>
+      </Div>
+
+      <ButtonNew type='button'>➕ New</ButtonNew>
     </Head>
   )
 }

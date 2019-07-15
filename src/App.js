@@ -1,6 +1,7 @@
 import React from 'react'
 import { gql } from 'apollo-boost'
 import { graphql } from 'react-apollo'
+import './App.css'
 
 import Header from './components/Header/Header'
 
