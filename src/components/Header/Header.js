@@ -14,7 +14,7 @@ function Header () {
         </MenuLink>
       </Div>
 
-      <Div>
+      <Div links>
         <Label>
           <Input placeholder='Search or jump to...' />
           <Img src={slash} alt={'Slash bar'} />

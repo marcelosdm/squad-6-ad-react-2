@@ -7,19 +7,18 @@ export const Head = styled.header`
   background-color: #24292e;
   color: #fff;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
-  justify-content: space-around;
-  margin-right: 16px !important;
-  padding: 16px 6px;
-  width: 100%;
+  justify-items: space-around;
+  padding: 16px;
 `
 
 export const Div = styled.div`
   align-items: center;
   display: flex;
   margin: 0 2px;
-  /* flex-grow: 4; */
+
+  flex-grow: ${props => (props.links ? '4' : '0')};
 `
 
 export const Img = styled.img`
@@ -46,12 +45,22 @@ export const Input = styled.input`
   background: none;
   border: none 2px;
   border-radius: 3px;
+  color: #fff;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
   height: 28px;
   padding: 0 3px;
+  transition: 250ms;
+  width: 280px;
+
+  :focus {
+    background: #fff;
+    color: #000;
+    outline: none;
+    width: 440px;
+  }
 `
 
 export const ButtonNew = styled.button`
@@ -67,6 +76,7 @@ export const ButtonNew = styled.button`
   font: normal 12px Arial, Helvetica, sans-serif;
   font-weight: 600;
   justify-content: center;
+  outline: none;
   padding: 5px 10px;
   text-shadow: 0 1px 2px rgb(50, 114, 40);
   transform-origin: 50% 50% 0;
@@ -89,5 +99,6 @@ export const ButtonNew = styled.button`
 export const MenuLink = styled.a`
   href: ${props => props.href};
 
+  cursor: pointer;
   margin-right: 16px !important;
 `
