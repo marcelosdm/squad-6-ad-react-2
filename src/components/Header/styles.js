@@ -14,11 +14,12 @@ export const Head = styled.header`
 `
 
 export const Div = styled.div`
-  align-items: center;
+  align-items: ${props => (props.input ? '' : 'center')};
   display: flex;
   margin: 0 2px;
 
   flex-grow: ${props => (props.links ? '4' : '0')};
+  flex-direction: ${props => (props.input ? 'column' : 'row')};
 `
 
 export const Img = styled.img`
@@ -34,7 +35,6 @@ export const Label = styled.label`
   border-radius: 3px;
   display: flex;
   margin-right: 8px !important;
-  padding: 0 6px;
   vertical-align: middle;
 `
 
@@ -102,3 +102,56 @@ export const MenuLink = styled.a`
   cursor: pointer;
   margin-right: 16px !important;
 `
+
+export const Ul = styled.ul`
+  background-color: #fff;
+  border: 1px solid #d1d5da;
+  border-radius: 3px;
+  margin-top: 30px;
+  position: absolute !important;
+  vertical-align: middle;
+  width: 440px;
+`
+
+export const Li = styled.li`
+  align-items: center;
+  border-bottom: 1px solid #e1e4e8;
+  color: #1b1f23;
+  cursor: pointer;
+  display: flex;
+  font-size: 14px;
+  font-weight: 400;
+  justify-content: flex-start;
+  line-height: 20px;
+  list-style-type: none;
+  text-align: left;
+  width: 100%;
+
+  :last-child {
+    border-bottom: 0;
+  }
+
+  :hover {
+    background-color: #0366d6;
+    color: #fff;
+  }
+`
+
+export const Anchor = styled.a`
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  width: 100%;
+`
+
+export const Span = styled.span`
+  background-color: ${props => (props.jump ? '#f6f8fa' : '')};
+  border: ${props => (props.jump ? '1px solid #e1e4e8' : '')};
+  border-radius: ${props => (props.jump ? '3px' : '')};
+  color: ${props => (props.jump ? '#6a737d' : '')};
+  flex-grow: ${props => (props.repository ? '25' : '1')};
+  font-size: ${props => (props.jump ? '12px' : '14px')};
+  padding: 3px 4px;
+`
+
+// align-items: ${props => (props.input ? '' : 'center')};
