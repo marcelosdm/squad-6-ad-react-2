@@ -80,7 +80,7 @@ export default function Header () {
         <Div input className={`app ${focused && 'is-focused'}`}>
           <Label>
             <Input type='text' ref={ref} placeholder='Search or jump to...' />
-            <Img src={slash} alt={'Slash bar'} />
+            {!focused && <Img src={slash} alt={'Slash bar'} />}
           </Label>
           {focused && <SearchRepositories />}
         </Div>
