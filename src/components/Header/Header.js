@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 
 import {
   Anchor,
@@ -46,16 +46,28 @@ function SearchRepositories () {
   )
 }
 
-function Search (props) {
-  const isSearching = props.isSearching
-  if (isSearching) {
-    return <SearchRepositories />
-  }
-  return ''
+const useFocus = ref => {
+  const [state, setState] = useState(false)
+
+  useEffect(() => {
+    const onFocus = () => setState(true)
+    const onBlur = () => setState(false)
+    ref.current.addEventListener('focus', onFocus)
+    ref.current.addEventListener('blur', onBlur)
+
+    return () => {
+      ref.current.removeEventListener('focus', onFocus)
+      ref.current.removeEventListener('blur', onBlur)
+    }
+  }, [])
+
+  return state
 }
 
-function Header () {
-  const [search, setSearch] = useState(false)
+export default function Header () {
+  const ref = useRef()
+  const focused = useFocus(ref)
+
   return (
     <Head>
       <Div>
@@ -65,12 +77,12 @@ function Header () {
       </Div>
 
       <Div links>
-        <Div input>
+        <Div input className={`app ${focused && 'is-focused'}`}>
           <Label>
-            <Input placeholder='Search or jump to...' />
+            <Input type='text' ref={ref} placeholder='Search or jump to...' />
             <Img src={slash} alt={'Slash bar'} />
           </Label>
-          <Search isSearching={search} onClick={() => setSearch(true)} />
+          {focused && <SearchRepositories />}
         </Div>
 
         <MenuLink>Pull Requests</MenuLink>
@@ -79,9 +91,9 @@ function Header () {
         <MenuLink>Explore</MenuLink>
       </Div>
 
-      <ButtonNew type='button'>➕ New</ButtonNew>
+      <ButtonNew type='button'>
+        <span role='img'>➕</span> New
+      </ButtonNew>
     </Head>
   )
 }
-
-export default Header
