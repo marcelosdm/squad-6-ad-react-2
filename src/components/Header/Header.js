@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import {
   Anchor,
@@ -55,6 +55,7 @@ function Search (props) {
 }
 
 function Header () {
+  const [search, setSearch] = useState(false)
   return (
     <Head>
       <Div>
@@ -69,7 +70,7 @@ function Header () {
             <Input placeholder='Search or jump to...' />
             <Img src={slash} alt={'Slash bar'} />
           </Label>
-          <Search isSearching={true} />
+          <Search isSearching={search} onClick={() => setSearch(true)} />
         </Div>
 
         <MenuLink>Pull Requests</MenuLink>
