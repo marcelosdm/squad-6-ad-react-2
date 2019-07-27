@@ -54,12 +54,7 @@ const useFocus = ref => {
     const onBlur = () => setState(false)
     ref.current.addEventListener('focus', onFocus)
     ref.current.addEventListener('blur', onBlur)
-
-    return () => {
-      ref.current.removeEventListener('focus', onFocus)
-      ref.current.removeEventListener('blur', onBlur)
-    }
-  }, [])
+  })
 
   return state
 }
@@ -92,7 +87,7 @@ export default function Header () {
       </Div>
 
       <ButtonNew type='button'>
-        <span role='img'>➕</span> New
+        <Img src={repository} /> New
       </ButtonNew>
     </Head>
   )

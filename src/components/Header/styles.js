@@ -23,9 +23,6 @@ export const Div = styled.div`
 `
 
 export const Img = styled.img`
-  src: ${props => props.src};
-  alt: ${props => props.alt};
-
   padding-right: ${props => (props.logo ? '16px' : '5px')};
 `
 
