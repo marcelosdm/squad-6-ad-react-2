@@ -1,51 +1,46 @@
 import styled from 'styled-components'
 
 export const Avatar = styled.div`
-  width: 25%;
-  min-width: 340px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
 `
 
 export const Block = styled.div`
   /* background-color : #FFE4C4; */
-  min-width: 250px;
-  width: 300px;
-  padding: 40px;
   display: flex;
-  flex-flow: column wrap;
-  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
 `
 
-export const Imagem = styled.div`
-  width: 300px;
-  height: 300px;
-  background-repeat: no-repeat;
-  background-image: url('../../img/jorge.jpeg');
+export const Imagem = styled.img`
+  flex: 1 1 272px;
+  width: 272px;
+  max-height: 271px;
+  height: 271px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
 `
 
-export const Link = styled.div`
-  display: flex;
-  flex-flow: column wrap;
+export const Link = styled.div``
+
+export const Text = styled.div`
   text-align: center;
-  height: auto;
-  border: 0.32mm solid #bebebe;
+  border: 1px solid #e1e4e8;
+  padding: 10px;
   border-radius: 3px;
-`
-
-export const Text = styled.p`
-  text-align: center;
+  width: 250px;
 `
 
 export const Button = styled.span`
-  background-color: #d3d3d3;
-  width: 100%;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 5px;
-  padding: px;
+  background-color: #e1e4e9;
+  width: 250px;
+  text-align: center;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 3px;
 
   :hover {
-    background-color: #cdc9c9;
+    background-color: #cdc5bf;
   }
 `

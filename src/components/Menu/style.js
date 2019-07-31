@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 export const Nav = styled.nav`
   display: flex;
@@ -24,4 +25,7 @@ export const Span = styled.div`
   align-self: center;
   background-color: #dcdcdc;
   border-radius: 15px;
+`
+export const StyledLink = styled(Link)`
+  text-decoration: none;
 `

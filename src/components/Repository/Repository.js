@@ -8,7 +8,9 @@ import {
   Description,
   Linguagem,
   Marcador,
-  NameLinguagem
+  NameLinguagem,
+  Date,
+  Div
 } from './styled'
 
 export default function Repository () {
@@ -20,11 +22,17 @@ export default function Repository () {
             <Span>Lara-rest</Span>
           </Link>
         </Flex>
-        <Description />
-        <Linguagem>
-          <Marcador />
-          <NameLinguagem>PHP</NameLinguagem>
-        </Linguagem>
+        <Description>
+          asdfajlkasdfasdfasdfjafdjasfj asdfkjasdfaçldsfjadfsadf
+          asdflkjsfdaksjdfaçsdfjkç
+        </Description>
+        <Div>
+          <Linguagem>
+            <Marcador />
+            <NameLinguagem>PHP</NameLinguagem>
+          </Linguagem>
+          <Date>01/01/2019</Date>
+        </Div>
       </Painned>
     </Box>
   )

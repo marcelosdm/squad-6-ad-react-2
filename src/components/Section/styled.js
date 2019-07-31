@@ -2,7 +2,8 @@ import styled from 'styled-components'
 
 export const Main = styled.section`
   /* background-color : #CDC5BF; */
-  width: 75%;
+  display: flex;
+  flex-wrap: wrap;
 `
 
 export const Content = styled.div`

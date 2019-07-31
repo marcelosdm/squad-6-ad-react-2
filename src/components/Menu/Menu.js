@@ -1,13 +1,15 @@
 import React from 'react'
-
-import { Nav, Word, Span, DivBotao } from './style'
+// import { Link } from 'react-router-dom'
+import { Nav, Word, Span, DivBotao, StyledLink } from './style'
 
 export default function Menu () {
   return (
     <Nav>
-      <DivBotao>
-        <Word>Overview</Word>
-      </DivBotao>
+      <StyledLink to='/overview'>
+        <DivBotao>
+          <Word>Overview</Word>
+        </DivBotao>
+      </StyledLink>
       <DivBotao>
         <Word>Repositories</Word>
         <Span>14</Span>

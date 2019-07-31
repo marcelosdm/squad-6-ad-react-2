@@ -1,15 +1,12 @@
 import React from 'react'
-import { Block, Imagem, Text, Link, Button, Avatar } from './style'
+import { Block, Imagem, Text, Button, Avatar } from './style'
 
 export default function Card () {
   return (
     <Avatar>
       <Block>
-        <Link>
-          <Imagem />
-        </Link>
-        <Text>Jorge da Silva Guimarães jorgesilvaguimaraes@gmail.com</Text>
-
+        <Imagem />
+        <Text>Jorge da Silva Guimarães</Text>
         <Button>Edit profile</Button>
       </Block>
     </Avatar>

@@ -1,24 +1,27 @@
 import React from 'react'
-import { gql } from 'apollo-boost'
-import { graphql } from 'react-apollo'
+// import { gql } from 'apollo-boost'
+// import { graphql } from 'react-apollo'
 import Main from './components/Main/Main'
 import data from './data/data.json'
+import { BrowserRouter as Router } from 'react-router-dom'
 
-const testQuery = gql`
-  query {
-    viewer {
-      login
-    }
-  }
-`
+// const testQuery = gql`
+//   query {
+//     viewer {
+//       login
+//     }
+//   }
+// `
 
 function App () {
   return (
-    <div>
-      <div className='App'>GitHub React</div>
-      <Main data={data} />
-    </div>
+    <Router>
+      <div>
+        <div className='App'>GitHub React</div>
+        <Main data={data} />
+      </div>
+    </Router>
   )
 }
 
-export default graphql(testQuery)(App)
+export default App
