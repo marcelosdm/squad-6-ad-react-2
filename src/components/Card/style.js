@@ -1,12 +1,12 @@
 import styled from 'styled-components'
 
-export const Avatar = styled.div`
+export const DivContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   padding: 10px;
 `
 
-export const Block = styled.div`
+export const DivBlock = styled.div`
   /* background-color : #FFE4C4; */
   display: flex;
   flex-wrap: wrap;
@@ -22,9 +22,7 @@ export const Imagem = styled.img`
   border-top-right-radius: 3px;
 `
 
-export const Link = styled.div``
-
-export const Text = styled.div`
+export const DivText = styled.div`
   text-align: center;
   border: 1px solid #e1e4e8;
   padding: 10px;
@@ -32,7 +30,7 @@ export const Text = styled.div`
   width: 250px;
 `
 
-export const Button = styled.span`
+export const SpanButton = styled.span`
   background-color: #e1e4e9;
   width: 250px;
   text-align: center;
