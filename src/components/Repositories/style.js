@@ -6,12 +6,12 @@ export const Container = styled.div`
   flex-direction: column;
 `
 
-export const Title = styled.div`
+export const DivTitle = styled.div`
   display: flex;
   flex-wrap: wrap;
 `
 
-export const Busca = styled.div`
+export const DivBusca = styled.div`
   display: flex;
   flex-wrap: wrap;
 `
@@ -19,32 +19,35 @@ export const Busca = styled.div`
 export const Form = styled.form`
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
+  width: 100%;
 `
 
-export const Input = styled.input`
+export const InputText = styled.input`
+  display: flex;
   margin: 10px;
-  width: 550px;
+  font-size: 25px;
+  line-height: 35px;
+  flex: 1 1 200px;
 `
 
-export const Button = styled.span`
-  background-color: #e1e4e9;
-  text-align: center;
-  padding: 10px;
-  border-radius: 3px;
+export const SelectType = styled.select`
+  display: flex;
   margin: 10px;
-
-  :hover {
-    background-color: #cdc5bf;
-  }
+  min-width: 100px;
 `
 
-export const ButtonNew = styled.span`
+export const OptionType = styled.option`
+  display: flex;
+  margin-left: 10px;
+`
+
+export const SpanButton = styled.span`
+  display: flex;
   background-color: #00cd00;
-  padding: 10px;
   border-radius: 3px;
-  text-align: center;
-  width: 60px;
+  justify-content: center;
+  align-items: center;
+  min-width: 100px;
   margin: 10px;
 
   :hover {

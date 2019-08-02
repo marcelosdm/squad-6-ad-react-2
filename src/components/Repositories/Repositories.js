@@ -1,28 +1,36 @@
 import React from 'react'
 import {
   Container,
-  Title,
-  Busca,
+  DivTitle,
+  DivBusca,
   Form,
-  Input,
-  ButtonNew,
+  InputText,
+  SpanButton,
   Repos,
-  H2
+  H2,
+  SelectType,
+  OptionType
 } from './style'
 import Repository from '../Repository/Repository'
 
 export default function Repositories () {
   return (
     <Container>
-      <Title>
+      <DivTitle>
         <H2>Repositories</H2>
-      </Title>
-      <Busca>
+      </DivTitle>
+      <DivBusca>
         <Form>
-          <Input />
-          <ButtonNew>New</ButtonNew>
+          <InputText />
+          <SelectType>
+            <OptionType>All</OptionType>
+            <OptionType>PHP</OptionType>
+            <OptionType>JavaScript</OptionType>
+            <OptionType>Html</OptionType>
+          </SelectType>
+          <SpanButton>New</SpanButton>
         </Form>
-      </Busca>
+      </DivBusca>
       <Repos>
         <Repository />
         <Repository />
