@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Box = styled.div`
+export const DivBox = styled.div`
   display: flex;
   margin: 20px;
   border: 1px solid #cdcdcd;
@@ -10,13 +10,13 @@ export const Box = styled.div`
   width: 100%;
 `
 
-export const Painned = styled.div`
+export const DivPainned = styled.div`
   display: flex;
   flex-wrap: wrap;
   width: 100%;
 `
 
-export const Flex = styled.div`
+export const DivFlex = styled.div`
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -31,17 +31,13 @@ export const Span = styled.span`
 
 export const Description = styled.p``
 
-export const Link = styled.a``
-
 export const Linguagem = styled.p``
-
-export const Marcador = styled.span``
 
 export const NameLinguagem = styled.span``
 
-export const Date = styled.p``
+export const PDate = styled.p``
 
-export const Div = styled.p`
+export const Div = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;

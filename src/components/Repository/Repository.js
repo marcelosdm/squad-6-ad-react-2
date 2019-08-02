@@ -1,36 +1,31 @@
 import React from 'react'
 import {
-  Box,
-  Painned,
-  Flex,
-  Link,
+  DivBox,
+  DivPainned,
+  DivFlex,
   Span,
   Description,
   Linguagem,
-  Marcador,
   NameLinguagem,
-  Date,
+  PDate,
   Div
 } from './styled'
 
 export default function Repository ({ repository }) {
   return (
-    <Box>
-      <Painned>
-        <Flex>
-          <Link>
-            <Span>{repository.name}</Span>
-          </Link>
-        </Flex>
-        <Description>{repository.Description} </Description>
+    <DivBox>
+      <DivPainned>
+        <DivFlex>
+          <Span>{repository.name}</Span>
+        </DivFlex>
+        <Description>{repository.description} </Description>
         <Div>
           <Linguagem>
-            <Marcador />
             <NameLinguagem>{repository.language}</NameLinguagem>
           </Linguagem>
-          <Date>{repository.created_data}</Date>
+          <PDate>{repository.created_data}</PDate>
         </Div>
-      </Painned>
-    </Box>
+      </DivPainned>
+    </DivBox>
   )
 }
