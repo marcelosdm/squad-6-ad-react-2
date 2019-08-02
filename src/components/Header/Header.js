@@ -66,7 +66,7 @@ export default function Header () {
   return (
     <Head>
       <Div>
-        <MenuLink href='#'>
+        <MenuLink>
           <Img logo src={logo} alt={'Github logo'} />
         </MenuLink>
       </Div>

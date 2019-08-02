@@ -31,7 +31,7 @@ export const Label = styled.label`
   border: 0;
   border-radius: 3px;
   display: flex;
-  margin-right: 8px !important;
+  margin-right: 8px;
   vertical-align: middle;
 `
 
@@ -94,10 +94,8 @@ export const ButtonNew = styled.button`
 `
 
 export const MenuLink = styled.a`
-  href: ${props => props.href};
-
   cursor: pointer;
-  margin-right: 16px !important;
+  margin-right: 16px;
 `
 
 export const Ul = styled.ul`
@@ -105,7 +103,7 @@ export const Ul = styled.ul`
   border: 1px solid #d1d5da;
   border-radius: 3px;
   margin-top: 30px;
-  position: absolute !important;
+  position: absolute;
   vertical-align: middle;
   width: 440px;
 `
