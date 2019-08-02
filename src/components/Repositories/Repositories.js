@@ -10,7 +10,6 @@ import {
   H2
 } from './style'
 import Repository from '../Repository/Repository'
-import Detail from '../Detail/Detail'
 
 export default function Repositories () {
   return (
@@ -21,8 +20,6 @@ export default function Repositories () {
       <Busca>
         <Form>
           <Input />
-          <Detail />
-          <Detail />
           <ButtonNew>New</ButtonNew>
         </Form>
       </Busca>
