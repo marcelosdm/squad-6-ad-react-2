@@ -13,7 +13,7 @@ import {
 } from './style'
 import Repository from '../Repository/Repository'
 
-export default function Repositories () {
+export default function Repositories ({ language, repositories }) {
   return (
     <Container>
       <DivTitle>
@@ -24,20 +24,19 @@ export default function Repositories () {
           <InputText />
           <SelectType>
             <OptionType>All</OptionType>
-            <OptionType>PHP</OptionType>
-            <OptionType>JavaScript</OptionType>
-            <OptionType>Html</OptionType>
+            {language.map(lang => (
+              <OptionType key={lang.id} value={lang.id}>
+                {lang.name}
+              </OptionType>
+            ))}
           </SelectType>
           <SpanButton>New</SpanButton>
         </Form>
       </DivBusca>
       <Repos>
-        <Repository />
-        <Repository />
-        <Repository />
-        <Repository />
-        <Repository />
-        <Repository />
+        {repositories.map(repository => (
+          <Repository repository={repository} />
+        ))}
       </Repos>
     </Container>
   )

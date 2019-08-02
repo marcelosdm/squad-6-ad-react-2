@@ -13,25 +13,22 @@ import {
   Div
 } from './styled'
 
-export default function Repository () {
+export default function Repository ({ repository }) {
   return (
     <Box>
       <Painned>
         <Flex>
           <Link>
-            <Span>Lara-rest</Span>
+            <Span>{repository.name}</Span>
           </Link>
         </Flex>
-        <Description>
-          asdfajlkasdfasdfasdfjafdjasfj asdfkjasdfaçldsfjadfsadf
-          asdflkjsfdaksjdfaçsdfjkç
-        </Description>
+        <Description>{repository.Description} </Description>
         <Div>
           <Linguagem>
             <Marcador />
-            <NameLinguagem>PHP</NameLinguagem>
+            <NameLinguagem>{repository.language}</NameLinguagem>
           </Linguagem>
-          <Date>01/01/2019</Date>
+          <Date>{repository.created_data}</Date>
         </Div>
       </Painned>
     </Box>

@@ -1,13 +1,13 @@
 import React from 'react'
-import { Main, Content } from './styled'
+import { Main, DivContent } from './styled'
 import Repositories from '../Repositories/Repositories'
 
-export default function Section () {
+export default function Section ({ ...data }) {
   return (
     <Main>
-      <Content>
-        <Repositories />
-      </Content>
+      <DivContent>
+        <Repositories {...data} />
+      </DivContent>
     </Main>
   )
 }

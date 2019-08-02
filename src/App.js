@@ -18,7 +18,7 @@ function App () {
     <Router>
       <div>
         <div className='App'>GitHub React</div>
-        <Main data={data} />
+        <Main {...data} />
       </div>
     </Router>
   )

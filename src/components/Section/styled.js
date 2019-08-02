@@ -6,7 +6,7 @@ export const Main = styled.section`
   flex-wrap: wrap;
 `
 
-export const Content = styled.div`
+export const DivContent = styled.div`
   background-color: #fff;
   margin: 20px 10px auto 10px;
 `
