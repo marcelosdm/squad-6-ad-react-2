@@ -35,7 +35,7 @@ export default function Repositories ({ language, repositories }) {
       </DivBusca>
       <Repos>
         {repositories.map(repository => (
-          <Repository repository={repository} />
+          <Repository key={repository.name} repository={repository} />
         ))}
       </Repos>
     </Container>
