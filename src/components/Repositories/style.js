@@ -34,6 +34,10 @@ export const SelectType = styled.select`
   display: flex;
   margin: 10px;
   min-width: 100px;
+
+  :hover {
+    cursor: pointer;
+  }
 `
 
 export const OptionType = styled.option`
@@ -52,6 +56,7 @@ export const SpanButton = styled.span`
 
   :hover {
     background-color: #008b00;
+    cursor: pointer;
   }
 `
 

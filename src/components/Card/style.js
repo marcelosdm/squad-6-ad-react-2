@@ -40,5 +40,6 @@ export const SpanButton = styled.span`
 
   :hover {
     background-color: #cdc5bf;
+    cursor: pointer;
   }
 `
