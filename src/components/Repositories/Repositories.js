@@ -1,15 +1,16 @@
 import React from 'react'
 import {
   Container,
-  DivTitle,
   DivBusca,
+  DivTitle,
   Form,
   InputText,
-  SpanButton,
+  Link,
+  Menu,
+  OptionType,
   Repos,
-  H2,
   SelectType,
-  OptionType
+  SpanButton
 } from './style'
 import Repository from '../Repository/Repository'
 
@@ -17,7 +18,14 @@ export default function Repositories ({ language, repositories }) {
   return (
     <Container>
       <DivTitle>
-        <H2>Repositories</H2>
+        <Menu>
+          <Link>Overview</Link>
+          <Link repo>Repositories</Link>
+          <Link>Projects</Link>
+          <Link>Stars</Link>
+          <Link>Followers</Link>
+          <Link>Following</Link>
+        </Menu>
       </DivTitle>
       <DivBusca>
         <Form>

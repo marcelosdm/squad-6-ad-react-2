@@ -65,4 +65,27 @@ export const Repos = styled.div`
   flex-wrap: wrap;
 `
 
-export const H2 = styled.h2``
+export const Menu = styled.nav`
+  display: flex;
+  flex-direction: row;
+`
+
+export const Link = styled.a`
+  border: 2px solid transparent;
+  border-bottom-color: ${props => (props.repo ? '#e36209' : '')};
+  color: #586069;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: ${props => (props.repo ? '600' : '')};
+  padding: 16px 8px;
+  text-align: center;
+  text-decoration: none;
+
+  :hover {
+    border-bottom: 2px solid transparent;
+    border-bottom-color: #d1d5da;
+    color: #24292e;
+    transition: 0.2s ease;
+  }
+`
