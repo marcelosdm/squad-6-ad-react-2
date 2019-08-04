@@ -1,4 +1,6 @@
 import React from 'react'
+import ButtonNew from '../ButtonNew/ButtonNew'
+
 import {
   Container,
   DivBusca,
@@ -9,8 +11,7 @@ import {
   Menu,
   OptionType,
   Repos,
-  SelectType,
-  SpanButton
+  SelectType
 } from './style'
 import Repository from '../Repository/Repository'
 
@@ -29,7 +30,7 @@ export default function Repositories ({ language, repositories }) {
       </DivTitle>
       <DivBusca>
         <Form>
-          <InputText />
+          <InputText placeholder='Find a repository...' />
           <SelectType>
             <OptionType>All</OptionType>
             {language.map(lang => (
@@ -38,7 +39,7 @@ export default function Repositories ({ language, repositories }) {
               </OptionType>
             ))}
           </SelectType>
-          <SpanButton>New</SpanButton>
+          <ButtonNew />
         </Form>
       </DivBusca>
       <Repos>

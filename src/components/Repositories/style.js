@@ -18,22 +18,43 @@ export const DivBusca = styled.div`
 
 export const Form = styled.form`
   display: flex;
-  flex-wrap: wrap;
+  /* flex: 1 1 auto; */
+  /* justify-content: space-evenly; */
+  padding: 16px 0;
   width: 100%;
 `
 
 export const InputText = styled.input`
-  display: flex;
-  margin: 10px;
-  font-size: 25px;
-  line-height: 35px;
-  flex: 1 1 200px;
+  background-color: #fff;
+  border: 1px solid #d1d5da;
+  border-radius: 3px;
+  color: #24292e;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0 10px;
+  padding: 6px 8px;
+  vertical-align: middle;
+  width: 400px;
+
+  :focus {
+    border-color: #2188ff;
+    box-shadow: inset 0 1px 2px rgba(27, 31, 35, 0.075),
+      0 0 0 0.2em rgba(3, 102, 214, 0.3);
+  }
 `
 
 export const SelectType = styled.select`
-  display: flex;
-  margin: 10px;
+  background-color: #eff3f6;
+  background-image: linear-gradient(-180deg, #fafbfc, #eff3f6 90%);
+  border: 1px solid rgba(27, 31, 35, 0.2);
+  border-radius: 0.25em;
+  color: #24292e;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 10px;
   min-width: 100px;
+  padding: 6px 12px;
 
   :hover {
     cursor: pointer;
