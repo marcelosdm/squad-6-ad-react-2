@@ -1,15 +1,26 @@
 import React from 'react'
-import { DivBlock, Avatar, Name, EditProfile, DivContainer } from './style'
+import {
+  Avatar,
+  DivBlock,
+  DivContainer,
+  EditProfile,
+  Name,
+  Location,
+  User,
+  Username
+} from './style'
 
 export default function Card () {
   return (
     <DivContainer>
       <DivBlock>
         <Avatar />
-        <Name>Jorge da Silva Guimarães</Name>
-        <Username />
+        <User>
+          <Name>Jorge da Silva Guimarães</Name>
+          <Username>jorgedasilva</Username>
+        </User>
         <EditProfile>Edit profile</EditProfile>
-        <Location />
+        <Location>Belém - Pará - Brazil</Location>
       </DivBlock>
     </DivContainer>
   )

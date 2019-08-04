@@ -22,17 +22,35 @@ export const Avatar = styled.img`
   border-top-right-radius: 3px;
 `
 
-export const Name = styled.p`
-  padding: 10px;
-  border-radius: 3px;
-  width: 250px;
+export const User = styled.div`
+  display: block;
+  padding: 10px 0;
+`
 
-  width: 235px;
+export const Name = styled.p`
+  border-radius: 3px;
   color: #24292e;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 26px;
   font-weight: 600;
   line-height: 30px;
+  margin: 0;
+  width: 235px;
+`
+
+export const Username = styled.p`
+  color: #666;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 24px;
+  margin: 0;
+`
+
+export const Location = styled.p`
+  color: #24292e;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
 `
 
 export const EditProfile = styled.span`
