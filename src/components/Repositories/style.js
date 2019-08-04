@@ -81,10 +81,7 @@ export const SpanButton = styled.span`
   }
 `
 
-export const Repos = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-`
+export const Repos = styled.ul``
 
 export const Menu = styled.nav`
   display: flex;
